@@ -1,5 +1,0 @@
-# Default initial positions for m_2025643_001's ros2_control fake system
-
-initial_positions:
-  m_2025643_001_joint_1: 0
-  m_2025643_001_joint_2: 0

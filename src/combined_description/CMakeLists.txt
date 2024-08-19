@@ -5,7 +5,7 @@ project(combined_description)
 find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
 find_package(robot_state_publisher REQUIRED)
-find_package(joint_state_publisher_gui REQUIRED)
+#find_package(joint_state_publisher_gui REQUIRED)
 find_package(rviz2 REQUIRED)
 find_package(kiwi_cell_description REQUIRED)
 find_package(motoman_gp7_description REQUIRED)
@@ -17,7 +17,7 @@ install(DIRECTORY launch
 )
 
 # Install URDF and configuration files
-install(DIRECTORY urdf config
+install(DIRECTORY urdf 
   DESTINATION share/${PROJECT_NAME}
 )
 
