@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-12-ge40d886  Build Version: 1.6.8301.19567
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="m_2063306_000" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="m_2063306_000" params="prefix">
+    <link name="${prefix}base_link">
+      <inertial>
+        <origin xyz="0.23397 0.00029888 0.15629" rpy="0 0 0" />
+        <mass value="5.7833" />
+        <inertia ixx="0.029824" ixy="0.0001163" ixz="-2.0315E-05" iyy="0.044642" iyz="3.2398E-05" izz="0.057924" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_2063306_000_description/meshes/base_link.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="0.75294 0.75294 0.75294 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_2063306_000_description/meshes/base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}link_1">
+      <inertial>
+        <origin xyz="-0.0010188 0.00075539 0.25483" rpy="0 0 0" />
+        <mass value="4.9135" />
+        <inertia ixx="0.023378" ixy="-0.00023389" ixz="5.6233E-06" iyy="0.026512" iyz="-1.1668E-05" izz="0.044967" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_2063306_000_description/meshes/link_1.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="0.75294 0.75294 0.75294 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_2063306_000_description/meshes/link_1.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}joint_1" type="prismatic">
+      <origin xyz="0.2845 0 0.127" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}link_1" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.1" effort="0.1" velocity="0.1" />
+    </joint>
+  </xacro:macro>
+
+</robot>

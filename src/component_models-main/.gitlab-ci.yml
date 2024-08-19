@@ -1,0 +1,22 @@
+variables:
+  ROS_DISTRO: humble
+
+.common:
+  tags: &ipa_runner
+    - asprunner
+
+machine_warehouse:
+  stage: build
+  image: ros:${ROS_DISTRO}-ros-core
+  before_script:
+    - apt update -qq
+    - apt install -y -qq git-core
+    - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci .industrial_ci
+  script: .industrial_ci/gitlab.sh ROS_DISTRO=${ROS_DISTRO}
+  services: []
+  variables:
+    ISOLATION: shell
+  tags: *ipa_runner
+
+stages:
+  - build

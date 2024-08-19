@@ -1,0 +1,44 @@
+# MoveIt uses this configuration for controller management
+
+controller_names:
+  - c_206_height_check_system_controller
+  - c_203_robot_arm_controller
+  - c_204_pick_place_system_controller
+  - c_208_workpiece_lifter_controller
+  - c_207_workpiece_feeder_controller
+
+c_206_height_check_system_controller:
+  action_ns: follow_joint_trajectory
+  default: True
+  type: FollowJointTrajectory
+  joints:
+    - c_206_height_check_system_joint_1
+    - c_206_height_check_system_joint_2
+c_203_robot_arm_controller:
+  action_ns: follow_joint_trajectory
+  default: True
+  type: FollowJointTrajectory
+  joints:
+    - c_203_robot_arm_joint_1
+    - c_203_robot_arm_joint_2
+    - c_203_robot_arm_joint_3
+    - c_203_robot_arm_joint_4
+c_204_pick_place_system_controller:
+  action_ns: follow_joint_trajectory
+  default: True
+  type: FollowJointTrajectory
+  joints:
+    - c_204_pick_place_system_joint_1
+    - c_204_pick_place_system_joint_2
+c_208_workpiece_lifter_controller:
+  action_ns: follow_joint_trajectory
+  default: True
+  type: FollowJointTrajectory
+  joints:
+    - c_208_workpiece_lifter_joint_1
+c_207_workpiece_feeder_controller:
+  action_ns: follow_joint_trajectory
+  default: True
+  type: FollowJointTrajectory
+  joints:
+    - c_207_workpiece_feeder_joint_1

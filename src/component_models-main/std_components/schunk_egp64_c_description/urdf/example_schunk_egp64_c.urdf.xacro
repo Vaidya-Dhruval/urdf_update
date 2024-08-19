@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="schunk_egp64_gripper_example" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Include description for gripper -->
+  <xacro:include filename="$(find schunk_egp64_c_description)/urdf/schunk_egp64_c.urdf.xacro" />
+
+  <!-- Instantiate schunk egp64 gripper -->
+  <xacro:schunk_egp64_c prefix="c_213_schunk_egp64_gripper_" />
+
+  <link name="world" />
+
+  <joint name="c_213_schunk_egp64_gripper_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="c_213_schunk_egp64_gripper_base_link"/>
+  </joint>
+
+</robot>

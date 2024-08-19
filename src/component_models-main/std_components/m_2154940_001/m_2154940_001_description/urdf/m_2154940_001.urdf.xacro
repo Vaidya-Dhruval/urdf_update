@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-12-ge40d886  Build Version: 1.6.8301.19567
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="m_2154940_001" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="m_2154940_001" params="prefix">
+    <link name="${prefix}base_link">
+      <inertial>
+        <origin xyz="-0.00033345 0.00023906 0.25293" rpy="0 0 0" />
+        <mass value="2.0735" />
+        <inertia ixx="0.0091049" ixy="-7.0561E-07" ixz="-1.5489E-07" iyy="0.0061399" iyz="4.7348E-08" izz="0.012288" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_2154940_001_description/meshes/base_link.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="0.75294 0.75294 0.75294 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_2154940_001_description/meshes/base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+
+</robot>

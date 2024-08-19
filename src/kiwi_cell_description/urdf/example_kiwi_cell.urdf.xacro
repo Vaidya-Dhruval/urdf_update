@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="kiwi_cell_example" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Include description for cell -->
+  <xacro:include filename="$(find kiwi_cell_description)/urdf/kiwi_cell.urdf.xacro" />
+
+  <!-- Instantiate kiwi cell -->
+  <xacro:kiwi_cell prefix="c_211_kiwi_cell_" />
+
+  <link name="world" />
+
+  <joint name="c_211_kiwi_cell_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="c_211_kiwi_cell_base_link"/>
+  </joint>
+
+</robot>

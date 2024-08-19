@@ -1,0 +1,5 @@
+repositories:
+  components:
+  type: git
+  url: https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.cc-asp.fraunhofer.de:ipa326/dtgs/component_models.git
+  version: cobotta_cell

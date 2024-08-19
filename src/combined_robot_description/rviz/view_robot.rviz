@@ -1,0 +1,43 @@
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Name: Grid
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/RobotModel
+      Enabled: true
+      Name: RobotModel
+      Robot Description: robot_description
+      Value: true
+      Visual Enabled: true
+      Collision Enabled: false
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+    - Class: rviz/SetGoal
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 3
+      Focal Point: 0; 0; 1
+      Pitch: 1.5708
+      Roll: 0
+      Yaw: -1.5708
+      Value: Orbit (Focal Point)
+    Saved: ~

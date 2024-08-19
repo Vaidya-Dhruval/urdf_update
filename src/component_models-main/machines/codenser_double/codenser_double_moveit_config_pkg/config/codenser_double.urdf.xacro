@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="codenser_double">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import codenser urdf file -->
+    <xacro:include filename="$(find codenser_double_description)/urdf/codenser_double.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="codenser_double.ros2_control.xacro" />
+
+
+    <xacro:codenser_double_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

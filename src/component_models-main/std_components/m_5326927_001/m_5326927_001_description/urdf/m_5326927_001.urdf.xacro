@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.1-12-ge40d886  Build Version: 1.6.8301.19567
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="m_5326927_001" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="m_5326927_001" params="prefix">
+    <link name="${prefix}base_link">
+      <inertial>
+        <origin xyz="-0.14164 -0.59781 -0.44321" rpy="0 0 0" />
+        <mass value="21.523" />
+        <inertia ixx="0.088184" ixy="3.5897E-05" ixz="-1.1803E-05" iyy="2.7101" iyz="-0.0006684" izz="2.6633" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_5326927_001_description/meshes/base_link.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="0.8549 0.74118 0.91765 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://m_5326927_001_description/meshes/base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}zone_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.4 0.65 0.1" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.4 0.65 0.1" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}joint_1" type="prismatic">
+      <origin xyz="0 0 0.6" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}zone_link" />
+      <axis xyz="0 1 0" />
+      <limit lower="0" upper="1.5" effort="0.1" velocity="0.1" />
+    </joint>
+  </xacro:macro>
+
+</robot>

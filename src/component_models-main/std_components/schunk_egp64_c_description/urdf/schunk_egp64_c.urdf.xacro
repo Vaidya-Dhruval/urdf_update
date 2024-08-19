@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="schunk_egp64_c">
+  <xacro:macro name="schunk_egp64_c" params="prefix">
+  <link
+    name="${prefix}base_link">
+    <inertial>
+      <origin
+        xyz="-3.61315117213839E-06 0.000475618657413579 0.0582790554639852"
+        rpy="0 0 0" />
+      <mass
+        value="0.859553631170882" />
+      <inertia
+        ixx="0.00191597877651781"
+        ixy="4.00042134610088E-08"
+        ixz="-5.58160665767195E-07"
+        iyy="0.0014804490367899"
+        iyz="-3.76488641737709E-06"
+        izz="0.00108248723606383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.1442"
+        rpy="0 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://schunk_egp64_c_description/meshes/housing_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunk_egp64_c_description/meshes/housing_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="${prefix}finger_1_link">
+    <inertial>
+      <origin
+        xyz="0.0471876393412815 -0.0018861722133516 0.0111778145392127"
+        rpy="0 0 0" />
+      <mass
+        value="0.0225556705017372" />
+      <inertia
+        ixx="4.47953728943556E-06"
+        ixy="-2.39257098315238E-07"
+        ixz="-9.70847442309627E-07"
+        iyy="6.3200809979785E-06"
+        iyz="-1.84079376871288E-07"
+        izz="3.98171824183272E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunk_egp64_c_description/meshes/finger_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunk_egp64_c_description/meshes/finger_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="${prefix}finger_1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 -0.032 0.14395"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="${prefix}base_link" />
+    <child
+      link="${prefix}finger_1_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.032"
+      effort="1000"
+      velocity="1000" />
+  </joint>
+  <link
+    name="${prefix}finger_2_link">
+    <inertial>
+      <origin
+        xyz="0.0472278553605108 -0.00188617221335157 0.0111778145392127"
+        rpy="0 0 0" />
+      <mass
+        value="0.0225556705017372" />
+      <inertia
+        ixx="4.47953728943556E-06"
+        ixy="-2.3925709831524E-07"
+        ixz="-9.70847442309626E-07"
+        iyy="6.3200809979785E-06"
+        iyz="-1.84079376871297E-07"
+        izz="3.98171824183272E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunk_egp64_c_description/meshes/finger_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://schunk_egp64_c_description/meshes/finger_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="${prefix}finger_2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0.032 0.14395"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="${prefix}base_link" />
+    <child
+      link="${prefix}finger_2_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.032"
+      effort="1000"
+      velocity="1000" />
+  </joint>
+  </xacro:macro>
+</robot>
