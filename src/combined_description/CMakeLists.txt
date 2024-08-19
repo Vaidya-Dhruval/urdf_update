@@ -17,7 +17,7 @@ install(DIRECTORY launch
 )
 
 # Install URDF and configuration files
-install(DIRECTORY urdf config
+install(DIRECTORY urdf config meshes
   DESTINATION share/${PROJECT_NAME}
 )
 
