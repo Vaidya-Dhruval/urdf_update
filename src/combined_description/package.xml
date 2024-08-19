@@ -1,0 +1,17 @@
+<package format="2">
+    <name>combined_description</name>
+    <version>0.0.1</version>
+    <description>Combined URDF of Kiwi Cell and Motoman GP7</description>
+    <maintainer email="your_email@domain.com">Your Name</maintainer>
+    <license>BSD</license>
+  
+    <depend>roslaunch</depend>
+    <depend>xacro</depend>
+    <depend>rviz</depend>
+    <depend>robot_state_publisher</depend>
+    <depend>joint_state_publisher</depend>
+    <depend>kiwi_cell_description</depend>
+    <depend>motoman_gp7_description</depend>
+    <depend>motoman_resources</depend>
+  </package>
+  

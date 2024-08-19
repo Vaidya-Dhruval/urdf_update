@@ -4,5 +4,3 @@
 	<xacro:include filename="$(find motoman_gp7_description)/urdf/gp7_macro.xacro" />
 	<xacro:motoman_gp7 prefix=""/>
 </robot>
-
-

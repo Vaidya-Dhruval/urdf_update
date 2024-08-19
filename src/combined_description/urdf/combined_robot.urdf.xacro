@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="combined_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <!-- Include the Kiwi Cell description -->
+    <xacro:include filename="$(find kiwi_cell_description)/urdf/kiwi_cell.urdf.xacro"/>
+    <xacro:kiwi_cell prefix="kiwi_"/>
+
+    <!-- Include the Motoman GP7 description -->
+    <xacro:include filename="$(find motoman_gp7_description)/urdf/gp7_macro.xacro"/>
+    <xacro:motoman_gp7 prefix="gp7_"/>
+
+    <!-- Define a fixed joint between Kiwi Cell and Motoman GP7 -->
+    <joint name="kiwi_to_gp7" type="fixed">
+        <origin xyz="0 0 1" rpy="0 0 0"/>
+        <parent link="kiwi_robot_base_plate_link"/>
+        <child link="gp7_base_link"/>
+    </joint>
+</robot>
