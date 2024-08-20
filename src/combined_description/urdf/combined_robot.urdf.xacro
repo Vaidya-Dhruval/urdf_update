@@ -10,9 +10,12 @@
     <xacro:motoman_gp7 prefix="gp7_"/>
 
     <!-- Define a fixed joint between Kiwi Cell and Motoman GP7 -->
+    <!-- Adjust the xyz and rpy values based on the correct alignment -->
     <joint name="kiwi_to_gp7" type="fixed">
-        <origin xyz="0 0 1" rpy="0 0 0"/>
+        <!-- Assume the GP7 base link needs to be lowered by 1 meter to align with Kiwi Cell -->
+        <origin xyz="0 0 0" rpy="0 0 3.15"/> <!-- Set xyz to 0 0 0 for direct alignment -->
         <parent link="kiwi_robot_base_plate_link"/>
         <child link="gp7_base_link"/>
     </joint>
+
 </robot>

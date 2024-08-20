@@ -48,7 +48,7 @@
     name="${prefix}robot_base_plate_link">
     <inertial>
       <origin
-        xyz="0 0 -0.008"
+        xyz="0 0 -2"
         rpy="0 0 0" />
       <mass
         value="0.94212" />
@@ -88,7 +88,7 @@
     name="${prefix}cell_robot_base_plate_joint"
     type="fixed">
     <origin
-      xyz="0.875 0.5225 0.982"
+      xyz="1.2 0.5225 0.982"
       rpy="0 0 0" />
     <parent
       link="${prefix}base_link" />
