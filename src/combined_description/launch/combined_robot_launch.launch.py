@@ -11,7 +11,7 @@ def generate_launch_description():
         DeclareLaunchArgument('model', default_value=os.path.join(
             get_package_share_directory('combined_description'), 'urdf', 'combined_robot.urdf.xacro'), description='Path to URDF file'),
         DeclareLaunchArgument('rvizconfig', default_value=os.path.join(
-            get_package_share_directory('motoman_gp7_description'), 'rviz', 'view.rviz'), description='Path to RViz config file'),
+            get_package_share_directory('combined_description'), 'rviz', 'view.rviz'), description='Path to RViz config file'),
 
         # Robot State Publisher Node
         Node(
@@ -33,8 +33,9 @@ def generate_launch_description():
             executable='rviz2',
             name='rviz2',
             output='screen',
-            arguments=['-d', LaunchConfiguration('rvizconfig')]
+            arguments=['-d', LaunchConfiguration('rvizconfig')],
         ),
+
 
         # Static Transform Publisher Node for map -> base_link
         Node(

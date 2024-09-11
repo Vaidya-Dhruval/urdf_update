@@ -9,6 +9,14 @@
     <xacro:include filename="$(find motoman_gp7_description)/urdf/gp7_macro.xacro"/>
     <xacro:motoman_gp7 prefix="gp7_"/>
 
+    <!-- Include the Robotiq 2f 85 Gripper description -->
+    <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model.xacro"/> 
+<!-- 
+    <xacro:include filename="$(find combined_description)/urdf/base_plate.xacro"/>
+    <xacro:base_plate prefix="" parent="world">
+        <origin xyz="0 -0.05 ${0.015+0.010}" rpy="0 -${pi/2} ${pi/2}"/>
+    </xacro:base_plate> -->
+
     <!-- Define a fixed joint between Kiwi Cell and Motoman GP7 -->
     <!-- Adjust the xyz and rpy values based on the correct alignment -->
     <joint name="kiwi_to_gp7" type="fixed">
@@ -16,6 +24,13 @@
         <origin xyz="0 0 0" rpy="0 0 3.15"/> <!-- Set xyz to 0 0 0 for direct alignment -->
         <parent link="kiwi_robot_base_plate_link"/>
         <child link="gp7_base_link"/>
+    </joint>
+    <!-- Define a fixed joint between Motoman GP7 and Gripper -->
+    <joint name="gp7_to_gripper" type="fixed">
+        <!-- Set the origin to match the physical placement of the gripper on the GP7 tool -->
+        <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Adjust xyz and rpy based on alignment -->
+        <parent link="gp7_tool0"/>  <!-- Motoman GP7's end-effector link -->
+        <child link="robotiq_arg2f_base_link"/> <!-- Gripper's base link -->
     </joint>
 
 </robot>
