@@ -11,12 +11,7 @@
 
     <!-- Include the Robotiq 2f 85 Gripper description -->
     <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model.xacro"/> 
-<!-- 
-    <xacro:include filename="$(find combined_description)/urdf/base_plate.xacro"/>
-    <xacro:base_plate prefix="" parent="world">
-        <origin xyz="0 -0.05 ${0.015+0.010}" rpy="0 -${pi/2} ${pi/2}"/>
-    </xacro:base_plate> -->
-
+    
     <!-- Define a fixed joint between Kiwi Cell and Motoman GP7 -->
     <!-- Adjust the xyz and rpy values based on the correct alignment -->
     <joint name="kiwi_to_gp7" type="fixed">
